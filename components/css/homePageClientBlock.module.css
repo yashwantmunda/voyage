@@ -1,0 +1,125 @@
+@media screen and (min-width:769px){
+    .clientBlock{
+        width:100%;
+        background-color: #3F5CFB;
+        position: relative;
+    }
+    .innerClientBlock{
+        padding:5.968vw 0 6.662vw 0;
+    }
+    .innerClientBlock h2{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.498vw;
+        line-height: 130%;
+        color: #FFFFFF;
+        position: relative;
+        z-index: 2;
+    }
+    .clientLogoWrapper{
+        width:100%;
+        margin:0 auto;
+        margin-top:5.760vw;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    .logoBlock{
+        margin-left:4.164vw;
+        margin-bottom:3.123vw;
+    }
+    .logoBlock:nth-child(n + 7){
+        margin-bottom:0;
+    }
+    .logoBlock:first-child,
+    .logoBlock:nth-child(7)
+    {
+        margin-left:0;
+    }
+    .logoBlock img{
+        width:100%;
+    }
+    #bleachTriangle{
+        width:0;
+        height:0;
+        border-top:19.744vw solid transparent;
+        border-bottom:20.94vw solid #3F5CFB;
+        border-right:20.716vw solid #3F5CFB;
+        border-left:20.716vw solid transparent;
+        position: absolute;
+        left:14.4352vw;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: multiply;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .clientBlock{
+        background-color: #3F5CFB;
+        padding:15.51vw 0 13.019vw 0;
+        position: relative;
+    }
+    .clientBlock h2{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 7.756vw;
+        line-height: 130%;
+        text-align: center;
+        color: #FFFFFF;
+        max-width:87.64vw;
+        margin:0 auto;
+        position: relative;
+        z-index: 2;
+    }
+    .innerClientBlock{
+        max-width: 100vw;
+    }
+    
+    .logoBlock img{
+        width:100%;
+    }
+    .clientLogoWrapper {
+        margin-top:11.634vw;
+        position: relative;
+        z-index:2;
+    }
+    .clientThreeBox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoBlock{
+        margin-bottom: 8.864vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logoBlock:last-child{
+        margin-bottom:0;
+    }
+    .logoBlock img{
+        height:6.648vw;
+        width:auto;
+    }
+    #bleachTriangle{
+        width:0;
+        height:0;
+        border-top:67.744vw solid transparent;
+        border-bottom:58.725vw solid #3F5CFB;
+        border-right:58.725vw solid #3F5CFB;
+        border-left:58.725vw solid transparent;
+        position: absolute;
+        left:-87vw;
+        bottom: 0;
+        z-index: 1;
+        mix-blend-mode: multiply;
+    }
+
+}

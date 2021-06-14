@@ -1,0 +1,49 @@
+@media screen and (min-width:769px){
+    .integrationBlock{
+        width:100%;
+        margin-bottom:12.70vw;
+    }
+    .integrationWrapper{
+        width:100%;
+    }
+    .integrationWrapper h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.498vw;
+        line-height: 130%;
+        color: #000000;
+        margin-bottom:5.205vw;
+        width:100%;
+        max-width: 44.971vw;
+    }
+    .imageWrapper{
+        width:100%;
+        height:19.846vw;
+        background-image:url("/images/integration-bannerBlock.png");
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width:768px){
+    .integrationBlock{
+        padding:23.822vw 0;
+    }
+    .integrationWrapper h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 8.864vw;
+        line-height: 130%;
+        color: #000000;
+    }
+    .imageWrapper{
+        width:100vw;
+        position: relative;
+        left:-5.584vw;
+        height:62.084vw;
+        margin-top:6.648vw;
+        background-image:url("/images/mobile-integration-banner.png");
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+}

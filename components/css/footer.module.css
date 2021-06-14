@@ -1,0 +1,226 @@
+
+@media screen and (min-width:769px){
+    #footer_wrapper{
+        background-color: #162740;
+    }
+    .footer{
+        width:100%;
+        padding:7.217vw 0 7.634vw 0;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .connected{
+        width:21.514vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        cursor: pointer;
+    }
+    .connected span{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.747vw;
+        line-height: 100%;
+        color: #5D8CD5;
+    }
+    .connected svg{
+        width:2.799vw;
+        margin-top:1.457vw;
+    }
+    .footerMenuWrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 48.302vw;
+        flex-grow: 1;
+    }
+    .menuBlock{
+        max-width:12.990vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .menuBlock h4{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1798vw;
+        line-height: 1.388vw;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.035vw;
+        color: #FFFFFF;
+        margin-bottom:1.041vw;
+    }
+    .menuBlock a,.menuBlock p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.902vw;
+        line-height: 1.596vw;
+        letter-spacing: 0.0416vw;
+        color: #FFFFFF;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .menuBlock a{
+        text-transform: capitalize;
+    }
+    .menuBlock p{
+        opacity:0.5;
+    }
+    .footerBottom{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:7.634vw;
+    }
+    .footerLogoWrap{
+        width:13.394vw;
+    }
+    .footerLogoWrap img{
+        width:100%;
+    }
+    .footerContact{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footerContact span{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.902vw;
+        line-height: 1.041vw;
+        color: #FFFFFF;
+        letter-spacing: 0.0694vw;
+        opacity:0.5;
+    }
+    .footerContact a{
+        position: relative;
+        top:-2px;
+    }
+    .footerContact span.divider{
+        margin:0 0.83vw;
+        
+    }
+}
+
+@media screen and (max-width:768px){
+    #footer_wrapper{
+        background-color: #162740;
+    }
+    .footer{
+        width:100%;
+        padding:8.864vw 0 11.357vw 0;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .connected{
+        width:100%;
+        max-width:90.57vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        cursor: pointer;
+    }
+    .connected span{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14.958vw;
+        line-height: 100%;
+        color: #5D8CD5;
+    }
+    .connected svg{
+        width:10.803vw;
+        margin-top:5.817vw;
+    }
+    .footerMenuWrapper{
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 100%;
+        width:100%;
+        margin-top:9.418vw;
+    }
+    .menuBlock{
+       width:50%;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-bottom: 11.08vw;
+    }
+    .menuBlock:last-child{
+        margin-bottom:0;
+    }
+    .menuBlock h4{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 4.709vw;
+        line-height: 5.54vw;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.35vw;
+        color: #FFFFFF;
+        margin-bottom:3.324vw;
+    }
+    .menuBlock a,.menuBlock p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 3.601vw;
+        line-height: 6.371vw;
+        letter-spacing: 0.0816vw;
+        color: #FFFFFF;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .menuBlock a{
+        text-transform: capitalize;
+    }
+    .menuBlock p{
+        opacity:0.5;
+    }
+    .footerBottom{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        margin-top:12.188vw;
+    }
+    .footerLogoWrap{
+        width:53.46vw;
+        margin-top:12.188vw;
+    }
+    .footerLogoWrap img{
+        width:100%;
+    }
+    .footerContact{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .footerContact span{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2.77vw;
+        line-height: 120%;
+        color: #FFFFFF;
+        letter-spacing: 0.277vw;
+        opacity:0.5;
+    }
+    .footerContact a{
+        position: relative;
+        top: -4px;
+    }
+    .footerContact span.divider{
+        margin:0 3.878vw;
+        
+    }
+}

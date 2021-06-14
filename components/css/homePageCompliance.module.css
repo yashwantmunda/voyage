@@ -1,0 +1,128 @@
+@media screen and (min-width:769px){
+    .complianceBlock{
+        width:100%;
+        margin-bottom:12vw;
+    }
+    .complianceWrapper{
+        width:100%;
+        position: relative;
+    }
+    .innerContent{
+        width:100%;
+        padding:4.372vw 5.413vw 4.858vw 7.287vw;
+        background-color: #162740;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .complianceTextBlock{
+        width:36.157vw;
+    }
+     .iconBox{
+       width:100%;
+    }
+    .innerIconBox{
+        width:4.587vw;
+        height:4.562vw;
+    }
+    .complianceTextBlock h2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2.498vw;
+        line-height: 130%;
+        color: #FFFFFF;
+        position: relative;
+        margin:1.596vw 0;
+    }
+    .complianceTextBlock p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.249vw;
+        line-height: 150%;
+        color: #FFFFFF;
+        opacity: 0.5;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .complianceTextBlock h2::before{
+        content:'';
+        position: absolute;
+        bottom:0;
+        height:0.138vw;
+        width:30.744vw;
+        background-color: #5BEBC1;
+    }
+    .logoBlock{
+        width:28.107vw;
+        height:14.435vw;
+        position: relative;
+    }
+    .logoBlock img{
+        width:100%;
+        height:auto;
+    }
+}
+
+@media screen and (max-width:768px){
+    .complianceBlock{
+        margin:23.882vw 0;
+    }
+    .innerContent{
+        width:100%;
+        padding:5.54vw 4.432vw 6.033vw 4.432vw;
+        background-color: #162740;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .complianceTextBlock{
+        width:100%;
+        
+    }
+     .iconBox{
+       width:100%;
+    }
+    .innerIconBox{
+        width:18.309vw;
+        height:18.309vw;
+    }
+    .complianceTextBlock h2{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 6.648vw;
+        line-height: 130%;
+        color: #FFFFFF;
+        position: relative;
+        margin:5.54vw 0 6.648vw 0;
+        max-width:74.79vw;
+    }
+    .complianceTextBlock p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.878vw;
+        line-height: 150%;
+        color: #FFFFFF;
+        opacity: 0.5;
+        margin-bottom:6.648vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .complianceTextBlock h2::before{
+        content:'';
+        position: absolute;
+        bottom:-2vw;
+        height:0.554vw;
+        width:100%;
+        background-color: #5BEBC1;
+    }
+    .logoBlock{
+        width:100%;
+        height:auto;
+        position: relative;
+    }
+    .logoBlock img{
+        width:100%;
+        height:auto;
+    }
+}

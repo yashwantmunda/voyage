@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+input{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  outline:none;
+}
+
+button {
+  border: unset;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.slick-arrow{
+  display: none!important;
+}
+@media screen and (min-width:769px){
+  .slideIn{
+    transform:translateY(-20%);
+    opacity:0;
+    transition:all 0.4s linear 1s;
+  }
+  .slick-active .slideIn{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .slideLeft{
+    opacity:0;
+    transition:opacity 0.5s ease-in;
+  }
+  .slick-active .slideLeft{
+    opacity:1;
+  }
+  .clientContainer .fresnel-container{
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+}
+
+
+
+
+.container{
+  width:100%;
+  max-width:88.832vw;
+  margin:0 auto;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family:"neue-haas-grotesk-display", sans-serif;
+  font-weight:400;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: hotpink;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+  @media screen and (max-width:768px){
+    #main-container{
+      padding-top:66px;
+    }
+    .slideLeft #Moonpod{
+      width:41.4vw!important;
+    }
+    .container{
+      width:100%;
+      max-width:90.18vw;
+      margin:0 auto;
+    }
+    .clientContainer .slick-track{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+   
+  }

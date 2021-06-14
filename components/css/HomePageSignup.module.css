@@ -1,0 +1,194 @@
+@media screen and (min-width:769px){
+    .signupBlock{
+        width:100%;
+    }
+    .signupWrapper{
+        width:100%;
+    }
+    .signupBox{
+        max-width:44.55vw;
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .signupBox h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.498vw;
+        line-height: 130%;
+        text-align: center;
+        color: #000000;
+    }
+    .signupBox p.description{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.249vw;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+        max-width:37.55vw;
+        opacity: 0.5;
+        margin:1.873vw auto 2.498vw auto;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .inputBox{
+        width:100%;
+        max-width: 29.425vw;
+    }
+     #inputWrapper{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border:0.0694vw solid #000;
+        border-radius:0.347vw;
+        padding:0.763vw 0.624vw 0.763vw 1.804vw;
+    }
+    #inputWrapper input{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.110vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: rgba(0, 0, 0, 1);
+        border:none;
+        flex-grow:1;
+        padding-right:0.7vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    #inputWrapper input::-webkit-placeholder,
+    #inputWrapper input::-moz-placeholder,
+    #inputWrapper input::-ms-placeholder{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.110vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: rgba(0, 0, 0, 0.2);
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    #inputWrapper button{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.110vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding:0.971vw 1.873vw;
+        border-radius:0.347vw;
+        background-color: #000;
+    }
+    p.extraInfo{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.249vw;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+        margin-top:1.388vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    p.extraInfo span{
+        font-weight:600;
+    }
+}
+
+@media screen and (max-width:768px){
+    .signupBlock{
+        width:100%;
+    }
+    .signupWrapper{
+        width:100%;
+    }
+    .signupBox{
+        
+        margin:0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .signupBox h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9.972vw;
+        line-height: 130%;
+        text-align: center;
+        color: #000000;
+        max-width:calc(100% - 12.54vw);
+    }
+    .signupBox p.description{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 4.432vw;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+        opacity: 0.5;
+        margin:5.54vw auto 8.864vw auto;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+        max-width:calc(100% - 3.54vw);
+    }
+    .inputBox{
+        width:100%;
+        max-width: 100%;
+    }
+     #inputWrapper{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border:0.277vw solid #000;
+        border-radius:1.385vw;
+        padding:1.385vw 1.385vw 1.385vw 4.432vw;
+    }
+    #inputWrapper input{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.878vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: rgba(0, 0, 0, 1);
+        border:none;
+        flex-grow:1;
+        padding-right:0.7vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    #inputWrapper input::-webkit-placeholder,
+    #inputWrapper input::-moz-placeholder,
+    #inputWrapper input::-ms-placeholder{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.878vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: rgba(0, 0, 0, 0.2);
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    #inputWrapper button{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 3.878vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding:3.878vw 7.479vw;
+        border-radius:1.385vw;
+        background-color: #000;
+    }
+    p.extraInfo{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.878vw;
+        line-height: 150%;
+        text-align: center;
+        color: #000000;
+        margin-top:4.432vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    p.extraInfo span{
+        font-weight:600;
+    }
+}

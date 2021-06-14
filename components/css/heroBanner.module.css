@@ -1,0 +1,413 @@
+@media screen and (min-width:769px){
+    #heroBanner{
+        width:100%;
+        position: relative;
+        padding-top: 7.627vw;
+    }
+    .heroBanner_innerWrapper{
+        max-width: 94.416vw;
+        margin:0 0 0 auto;
+        display: flex;
+        align-items:flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .leftBlock{
+        width:100%;
+        max-width:36.018vw;
+        padding-top:6.03vw;
+    }
+    .bannerTitle{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 5.690vw;
+        line-height: 110%;
+        color: #000000;
+        margin-bottom:1.735vw;
+        width:100%;
+        max-width:26.37vw;
+    }
+    .bannerText{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.249vw;
+        line-height: 150%;
+        margin-bottom:3.817vw;
+        color: rgba(0, 0, 0, 0.8);
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .rightBlock{
+        max-width:50.037vw;
+        width:100%;
+    }
+    .btnWrapper{
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom:3.47vw;
+    }
+    .btnWrapper .trialBtn{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.110vw;
+        line-height: 130%;
+        letter-spacing: 0.05%;
+        color: #FFFFFF;
+        padding:0.971vw 1.873vw;
+        background-color: #3F5CFB;
+        border-radius: 0.347vw;
+        margin-right:3.678vw;
+        cursor: pointer;
+    }
+    .btnWrapper .videoPopup{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        cursor: pointer;
+    }
+    .videoPopup svg{
+        width:2.15vw;
+        height:2.15vw;
+        margin-right:1.18vw;
+    }
+    .spanText p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.110vw;
+        line-height: 150%;
+         color: #7E7E7E;
+         font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .spanText span{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.971vw;
+        line-height: 150%;
+        color: #B3B3B3;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .rating{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .rating svg{
+        width:1.110vw;
+        margin-right:0.347vw;
+    }
+    #ratedText{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 0.832vw;
+        line-height: 130%;
+        color: #000000;
+        margin-top:0.451vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .rightBlock{
+        width:100%;
+        max-width:52.53vw;   
+        padding-top:1vw;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+    }
+    .rightBlockBoundary{
+        width:100%;
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        position: relative;
+        flex-direction: column;
+        position: relative;
+        
+    }
+    .rightBlockBoundary::before{
+        /* content:''; */
+        position: absolute;
+        width: 63.53vw;
+        height: 63.53vw;
+        left: 9.8vw;
+        top: -3.6vw;
+        border-radius: 50%; 
+        border:1px dashed #E3E3E3;
+        z-index: -1;
+    }
+    .boundaryRing{
+        position: absolute;
+        width: 63.53vw;
+        height: 63.53vw;
+        left: 9.8vw;
+        top: -3.6vw;
+        border-radius: 50%; 
+        border:1px dashed #E3E3E3;
+        z-index: -1;
+    }
+    #mainImage{
+        width:36.366vw;
+        height:auto;
+        transform: translateY(4vw);
+    }
+    #dottedImage{
+        width:5.55vw;
+        margin-bottom:0.833vw;
+        transform: translateY(4vw);
+    }
+    .baseBlockImage{
+        width:14.36vw; 
+        height: 12.69vw;
+        position: absolute;
+        bottom: calc(-1*3.1vw);
+        left: 8.35vw;
+        z-index:1;
+    }
+    .triangleBox{
+        position: absolute;
+        left: 16.4vw;
+        top: 14.8vw;
+        width: 8.788vw;
+        height: 8.788vw;    
+    }
+    .messageIconBox{
+        position:absolute;
+        right:0;
+        top: 9.5vw;
+        z-index: 2;
+        width:5.621vw;
+        height:4.580vw;
+    }
+    #darkBlueBlock{
+        width:44.1vw;
+        height:9.577vw;
+        background-color: #162740;
+    }
+    .messageEmitterBlock{
+        position:absolute;
+        left:2vw;
+        top: 3vw;
+        width:27.968vw;
+        height:27.898vw;
+    }
+    .messageEmitterBlock #user_one{
+        position:absolute;
+        right:0;
+        top:0;
+        width:19.154vw;
+    }
+    .messageEmitterBlock #user_two{
+        position:absolute;
+        top:9.50vw;
+        left: 2.2vw;
+        width:14.435vw;
+    }
+    .messageEmitterBlock #user_two_text_two{
+        position:absolute;
+        top:14.4vw;
+        left: 1.786vw;
+        width:12.07vw;
+    }
+    .messageEmitterBlock #final_voyage_message{
+        width:12.977vw;
+        height:auto;
+        position: absolute;
+        left: calc(-1*3vw);
+        bottom:calc(-1*2vw);
+    }
+}
+
+@media screen and (max-width:768px){
+    .leftBlock{
+        width: 100%;
+        max-width: 90.18vw;
+        margin: 0 auto;
+        padding-top:6.925vw;
+    }
+    .leftBlock h1{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14.404vw;
+        line-height: 110%;
+        color: #000000;
+        max-width: 80.05vw;
+    }
+    .leftBlock p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.878vw;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.8);
+        font-family:"neue-haas-grotesk-text",sans-serif;
+        margin:2.216vw 0 7.479vw 0;
+    }
+    .btnWrapper{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .trialBtn{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 3.878vw;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        padding:3.878vw 7.479vw;
+        background-color: #3F5CFB;
+        border-radius:5px;
+        white-space: nowrap;
+    }
+    .videoPopup{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left:5.54vw;
+    }
+    .videoPopup svg{
+        width:23px;
+        margin-right:3.324vw;
+    }
+    .spanText p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.944vw;
+        line-height: 150%;
+        color: #7E7E7E;
+        margin-bottom:0;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .spanText span{
+        display: block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 9.2.524vw;
+        line-height: 150%;
+        color: #B3B3B3;
+    }
+    .rating{
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top:2.493vw;
+        padding-top:0.554vw;
+    }
+    .rating svg{
+        width: 3.20vw;
+        margin-right:1.066vw;
+    }
+    #ratedText{
+        display: inline-flex;
+        margin-left:1.939vw;
+        margin-bottom:0;
+        margin-top:0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.66vw;
+        line-height: 130%;
+        color: #000000;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .rightBlock{
+        width:100%;
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top:13.85vw;
+    }
+    #dottedImage{
+        width:13.573vw;
+        position: absolute;
+        right:0;
+        top: -1vw;
+        z-index: 3;
+    }
+    .messageEmitterBlock{
+        width:69.25vw;
+        height:77.56vw;
+        position: absolute;
+        left: 0;
+        top: 0vw;
+    }
+    .messageEmitterBlock img{
+        position: absolute;
+        z-index:2;
+    }
+    .messageEmitterBlock #user_one{
+        width:51.24vw;
+        right:3.878vw;
+        top:2.77vw;
+    }
+    .triangleBox{
+        opacity: 1;
+        position: absolute;
+        right: 37vw;
+        top: 36vw;
+    }
+    .messageEmitterBlock #user_two{
+        width:34.902vw;
+        top: 24.099vw;
+        right: 22.991vw;
+    }
+    .messageEmitterBlock #user_two_text_two{
+        width:27.423vw;
+        top: 36.01vw;
+        right: 27.254vw;
+    }
+    .messageEmitterBlock #final_voyage_message{
+        width:40.996vw;
+        top: 51.522vw;
+        right: 24.376vw;
+    }
+    .triangleBox svg{
+        width:9.925vw;
+    }
+    .messageIconBox {
+        position: relative;
+        right: -41.273vw;
+        width: 9.14vw;
+        top: 34.42vw;
+        z-index: 4;
+    }
+    
+    #mainImage{
+        width:48.907vw;
+        position: relative;
+        top: 11.08vw;
+        z-index:2;
+        right: -2vw;
+    }
+    .baseBlockImage{
+        width:19.94vw;
+        position: relative;
+        right: 20.7vw;
+        top: 5.4vw;
+        z-index:3;
+    }
+    .boundaryRing{
+        width: 88.22vw;
+        height: 88.22vw;
+        border-radius:50%;
+        border:0.277vw dashed #E3E3E3;
+        top: 3vw;
+        position: absolute;
+        right: calc(-1*25.62vw);
+    }
+    #darkBlueBlock{
+        width:69.527vw;
+        height:13.109vw;
+        position: absolute;
+        bottom:0;
+        right:0;
+        background-color: #162740;
+    }
+}
+
+@media screen and (device-width:320px){
+    .trialBtn{
+        padding: 14px 2vw;
+    }
+}
