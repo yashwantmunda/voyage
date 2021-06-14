@@ -1,5 +1,5 @@
 import { serviceBlockData } from '../data/HomePageServiceBlock';
-import styles from './css/HomePageServiceBlock.module.css';
+import styles from './css/homePageServiceBlock.module.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from 'react';
