@@ -1,0 +1,100 @@
+@media screen and (min-width:769px){
+    .VideoModalBlock{
+        width: 100%;
+        position: fixed;
+        z-index:9999;
+        left:0;
+        top:0;
+        height:100%;
+        display: none;
+        opacity:0;
+        visibility: hidden;
+    }
+    .shadowBox{
+        width:100%;
+        height:100%;
+        position: absolute;
+        left:0;
+        top:0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .videoModalWrapper{
+        position: relative;
+        width:66.485vw;
+        height:37.476vw;
+        left:50%;
+        top:50%;
+        z-index:9;
+        transform: translate(-50%,-50%);
+    }
+    .closeVideo{
+        position: absolute;
+        top:0;
+        right:0;
+        transform:translate(100%,-100%);
+        width:3.608vw;
+        height:3.608vw;
+        cursor: pointer;
+    }
+    .closeVideo svg{
+        width:100%;
+    }
+    .videoContainer{
+        width:100%;
+        height:100%;
+        background-color: #fff;
+        border-radius: 1.388vw;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width:768px){
+    .VideoModalBlock{
+        width: 100%;
+        position: fixed;
+        z-index:9999;
+        left:0;
+        top:0;
+        height:100%;
+        display: none;
+        opacity:0;
+        visibility: hidden;
+    }
+    .shadowBox{
+        width:100%;
+        height:100%;
+        position: absolute;
+        left:0;
+        top:0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .videoModalWrapper{
+        position: relative;
+        max-width: calc(100% - 40px);
+        width:93.18vw;
+        height:52.53vw;
+        left:50%;
+        top:50%;
+        z-index:9;
+        transform: translate(-50%,-50%);
+    }
+    .closeVideo{
+        position: absolute;
+        top:0;
+        right:0;
+        transform:translate(0%,-120%);
+        width:8.864vw;
+        height:8.864vw;
+        cursor: pointer;
+    }
+    .closeVideo svg{
+        width:100%;
+    }
+    .videoContainer{
+        width:100%;
+        height:100%;
+        background-color: #fff;
+        border-radius: 1.388vw;
+        overflow: hidden;
+    }
+}

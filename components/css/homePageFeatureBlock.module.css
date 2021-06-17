@@ -63,6 +63,8 @@
         flex-direction: column;
         align-items: center;
         z-index:2;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .videoIntroBlock h4{
         margin:0.694vw 0 0.763vw 0;
@@ -209,6 +211,8 @@
         flex-direction: column;
         align-items: center;
         z-index:2;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .videoIntroBlock h4{
         margin:3.878vw 0 2.493vw 0;

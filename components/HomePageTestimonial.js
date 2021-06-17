@@ -13,6 +13,9 @@ export default function HomePageTestimonial() {
     const topReviewBoxRef = useRef();
     const reviewPopupRef = useRef();
     const sliderRef = useRef();
+    const readMoreRef = useRef();
+    const plusArrow = useRef();
+    const minusArrow = useRef();
 
     const { MediaContextProvider, Media } = createMedia({
         breakpoints: {
@@ -37,19 +40,32 @@ export default function HomePageTestimonial() {
         gsap.to(topReviewBoxRef.current, {opacity:0,duration:0.3,autoAlpha:0}); 
     }
 
-    const openCloseReview = (rbRef) => {
+    const openCloseReview = () => {
+        let t1 = gsap.timeline();
         if(reviewPopupRef.current.classList.contains('active')){
+            t1.to('.reviewTextBox',{opacity:0,autoAlpha:0,display:'none'}).
+            to('.mobileSummary',{opacity:1,autoAlpha:1,display:'block'});
+            
+            readMoreRef.current.textContent = 'Read More';
+            minusArrow.current.style.display = 'none';
+            plusArrow.current.style.display = 'block';
+            
             reviewPopupRef.current.classList.remove('active');
-            gsap.to('.slick-active .reviewTextBox', {opacity:0,y:'-35%',duration:0.4,autoAlpha:0});
-            gsap.to('.slickController', {opacity:1,duration:0.2,autoAlpha:1});
-            gsap.to(topReviewBoxRef.current, {opacity:0,duration:0.3,autoAlpha:0});
-        }
-        else{
+
+        }else{
+            
+            t1.to('.mobileSummary',{opacity:0,autoAlpha:0,display:'none'}).
+            to('.reviewTextBox',{opacity:1,autoAlpha:1,display:'block'});
+            
+            readMoreRef.current.textContent = 'Back';
+            plusArrow.current.style.display = 'none';
+            minusArrow.current.style.display = 'block';
+            
             reviewPopupRef.current.classList.add('active');
-            gsap.to('.slick-active .reviewTextBox', {opacity:1,y:'-50%',duration:0.4,autoAlpha:1});
-            gsap.to('.slickController', {opacity:0,duration:0.2,autoAlpha:0});
-            gsap.to(topReviewBoxRef.current, {opacity:1,duration:0.3,autoAlpha:1});  
         }
+
+        
+       
     }
 
     const settings = {
@@ -130,7 +146,7 @@ export default function HomePageTestimonial() {
                             <img src={`/images/${testimonial.modalImage}`} alt={testimonial.clientName} />
                         </div>
 
-                        <div className={`slideLeft ${styles.summaryBlock}`} data-scroll>
+                        <div className={`slideLeft mobileSummary ${styles.summaryBlock}`} data-scroll>
                             {
                                 testimonial.summaryPoints.map((point,index) => (<div key={index} className={styles.stepBox}>
                                     <div className={styles.counter}><span>0{index+1}</span></div>
@@ -143,19 +159,26 @@ export default function HomePageTestimonial() {
                         {/* reviewtext as an overlay in mobile */}
                         <Media lessThan="md">
                         <div className={`reviewTextBox ${styles.testimonialDetail}`}> 
-                            <p className={styles.testimonialText}>
-                                {testimonial.testimonialText}
-                            </p>
-                            <p className={styles.reviewer}>{testimonial.reviewer}</p>
-                            <span className={styles.designation}>({testimonial.reviewerDesignation})</span>
-                            <div className={styles.ratingBlock}>
-                                {
-                                    [...Array(testimonial.rating).keys()].map((i) => (<svg key={i} viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M13.8094 9.43567L17.4536 6.5792C17.9691 6.17354 17.7024 5.37914 17.0269 5.34533L12.334 5.0749C12.0496 5.05799 11.8007 4.88897 11.694 4.63544L9.96976 0.443684C9.72089 -0.147895 8.84985 -0.147895 8.60098 0.443684L6.87669 4.61854C6.77003 4.87207 6.52117 5.04109 6.23675 5.05799L1.52604 5.32843C0.850546 5.36223 0.583902 6.15664 1.09941 6.56229L4.74354 9.40187C4.95686 9.57089 5.06351 9.85823 4.99241 10.1118L3.8014 14.4556C3.64141 15.0641 4.33469 15.5543 4.90353 15.2162L8.86763 12.7992C9.1165 12.6471 9.41869 12.6471 9.64978 12.7992L13.6317 15.2162C14.2005 15.5543 14.8938 15.0641 14.7338 14.4556L13.5428 10.1287C13.4895 9.87513 13.5783 9.6047 13.8094 9.43567Z" fill="#E9B531" fillOpacity="0.9"/>
-                                        </svg>
-                                    ))
-                                }
-                            </div>
+                            
+                                <p className={styles.testimonialText}>
+                                    {testimonial.testimonialText}
+                                </p>
+                                <div className={styles.mobileReviewBox}>
+                                    <div className={styles.nameDesignationBlock}>
+                                        <p className={styles.reviewer}>{testimonial.reviewer}</p>
+                                        <span className={styles.designation}>({testimonial.reviewerDesignation})</span>
+                                    </div>
+                            
+                                <div className={styles.ratingBlock}>
+                                    {
+                                        [...Array(testimonial.rating).keys()].map((i) => (<svg key={i} viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8094 9.43567L17.4536 6.5792C17.9691 6.17354 17.7024 5.37914 17.0269 5.34533L12.334 5.0749C12.0496 5.05799 11.8007 4.88897 11.694 4.63544L9.96976 0.443684C9.72089 -0.147895 8.84985 -0.147895 8.60098 0.443684L6.87669 4.61854C6.77003 4.87207 6.52117 5.04109 6.23675 5.05799L1.52604 5.32843C0.850546 5.36223 0.583902 6.15664 1.09941 6.56229L4.74354 9.40187C4.95686 9.57089 5.06351 9.85823 4.99241 10.1118L3.8014 14.4556C3.64141 15.0641 4.33469 15.5543 4.90353 15.2162L8.86763 12.7992C9.1165 12.6471 9.41869 12.6471 9.64978 12.7992L13.6317 15.2162C14.2005 15.5543 14.8938 15.0641 14.7338 14.4556L13.5428 10.1287C13.4895 9.87513 13.5783 9.6047 13.8094 9.43567Z" fill="#E9B531" fillOpacity="0.9"/>
+                                            </svg>
+                                        ))
+                                    }
+                                </div>
+
+                                </div>
                         </div>
                         </Media> 
                         {/* reviewtext as an overlay in mobile */}       
@@ -174,9 +197,12 @@ export default function HomePageTestimonial() {
                 </Media>
                 <Media lessThan="md">
                     <div onClick={openCloseReview} className={styles.reviewPopup} ref={reviewPopupRef}>
-                        <span>READ MORE</span>
-                        <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <span id="read-more" ref={readMoreRef}>READ MORE</span>
+                        <svg ref={plusArrow} className='plus' viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M10.0625 4.875H6.125V0.9375C6.125 0.71875 5.90625 0.5 5.6875 0.5H4.8125C4.56641 0.5 4.375 0.71875 4.375 0.9375V4.875H0.4375C0.191406 4.875 0 5.09375 0 5.3125V6.1875C0 6.43359 0.191406 6.625 0.4375 6.625H4.375V10.5625C4.375 10.8086 4.56641 11 4.8125 11H5.6875C5.90625 11 6.125 10.8086 6.125 10.5625V6.625H10.0625C10.2812 6.625 10.5 6.43359 10.5 6.1875V5.3125C10.5 5.09375 10.2812 4.875 10.0625 4.875Z" fill="#B2BEFD"/>
+                        </svg>
+                        <svg ref={minusArrow} className={`minus ${styles.minus}`} viewBox="0 0 11 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.0625 0.875H0.4375C0.191406 0.875 0 1.09375 0 1.3125V2.1875C0 2.43359 0.191406 2.625 0.4375 2.625H10.0625C10.2812 2.625 10.5 2.43359 10.5 2.1875V1.3125C10.5 1.09375 10.2812 0.875 10.0625 0.875Z" fill="#B2BEFD"/>
                         </svg>
                     </div>
                 </Media>

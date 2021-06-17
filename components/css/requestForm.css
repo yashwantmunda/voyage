@@ -1,0 +1,619 @@
+#registration-form-modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #E5E5E5;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s
+}
+#registration-form-modal.visible {
+    opacity: 1;
+    visibility: visible
+}
+#registration-form-modal .registration-wrapper {
+    width: calc(100% - 80px);
+    max-width: 1133px;
+    background-color: #fff;
+    height: auto;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+@media screen and (max-height: 640px) {
+    #registration-form-modal .registration-wrapper.extra-margin {
+        margin: 20px 0
+    }
+}
+@media screen and (device-width: 320px) {
+    #registration-form-modal .registration-wrapper.extra-margin {
+        margin: 90px 0 0px 0
+    }
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper {
+        width: calc(100% - 40px);
+        max-width: 496px;
+        height: auto;
+        margin: 0px 0 0px 0
+    }
+}
+#registration-form-modal .registration-wrapper.shrink-height {
+    top: 0;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%)
+}
+#registration-form-modal .registration-wrapper.shrink-height:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 84px;
+    height: 70px;
+    background-color: #5CEBC1
+}
+#registration-form-modal .registration-wrapper #close-registration-modal {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 88
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper #close-registration-modal {
+        top: 18px;
+        right: 18px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap {
+        flex-direction: column
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #left-form-wrap {
+    width: calc(100% - 403px);
+    max-width: 730px;
+    min-height: 572px;
+    background-image: url("./images/voyage-form-left-banner.jpg");
+    background-size: contain;
+    background-color: #4262F7;
+    background-repeat: no-repeat;
+    background-position: center
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #left-form-wrap {
+        width: calc(100% - 406px)
+    }
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #left-form-wrap {
+        width: 100%;
+        max-width: unset;
+        height: 175px;
+        min-height: unset
+    }
+}
+@media screen and (device-width: 320px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #left-form-wrap {
+        font-size: 1.9rem;
+        height: 145px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap {
+    width: 100%;
+    max-width: 403px;
+    min-height: 572px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap {
+        max-width: 406px
+    }
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap {
+        width: 100%;
+        max-width: unset;
+        min-height: unset;
+        height: auto
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 572px;
+    padding: 95px 44px 0 44px;
+    box-sizing: border-box
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper {
+        padding: 21px 20px 75px 20px
+    }
+}
+@media screen and (device-width: 320px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper {
+        padding: 21px 20px 65px 20px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 {
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 56px;
+    color: #000000
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 {
+        font-size: 36px;
+        line-height: 119.4%;
+        letter-spacing: 0.275px;
+        margin-bottom: 47px
+    }
+}
+@media screen and (device-width: 320px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 {
+        font-size: 1.9rem;
+        margin-bottom: 39px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 span {
+    display: inline-block;
+    float: none;
+    clear: both;
+    position: relative
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 span.underline::after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    z-index: -1;
+    background-color: #5BEAC0
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper form#email-check-form {
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper #instrinsic-layout {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+    overflow: hidden
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper #instrinsic-layout img {
+    max-width: 287px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 5px
+}
+@media screen and (max-width: 480px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper #instrinsic-layout img {
+        max-width: 205px
+    }
+}
+@media screen and (max-width: 768px) and (min-width: 481px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper #instrinsic-layout img {
+        max-width: 227px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .final-contact-wrapper {
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0px 24px 0 28px;
+    box-sizing: border-box;
+    display: none;
+    height: 572px
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .final-contact-wrapper form#complete-data-form {
+    height: 100%;
+    justify-content: center
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .final-contact-wrapper form#complete-data-form {
+        height: unset
+    }
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .final-contact-wrapper {
+        padding: 52px 20px 70px 20px;
+        height: unset
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: calc(572px - 50px);
+    margin-top: 25px;
+    width: 100%;
+    display: none
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block {
+        height: 310px;
+        padding-left: 43px;
+        box-sizing: border-box
+    }
+}
+@media screen and (device-width: 320px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block {
+        padding-left: 20px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block #mobile-icon-greet {
+    display: none;
+    align-self: flex-start
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block #mobile-icon-greet {
+        display: block
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 {
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 117.4%;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-bottom: 0px;
+    width: 324px
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 {
+        margin-bottom: 36px;
+        width: 100%
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 span {
+    display: inline-block;
+    float: none;
+    clear: both;
+    position: relative
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 span.underline::after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    left: 0;
+    width: calc(100% + 6px);
+    height: 4px;
+    z-index: -1;
+    background-color: #5BEAC0
+}
+@media screen and (max-width: 768px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 span {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 122.9%;
+        letter-spacing: 0.03em
+    }
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block h2 span.underline {
+        font-weight: 500;
+        font-size: 46px;
+        line-height: 122.9%;
+        letter-spacing: 0.03em;
+        margin-bottom: 7px
+    }
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block .instrinsic-layout {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: -2;
+    overflow: hidden
+}
+#registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block .instrinsic-layout img {
+    max-width: 287px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 5px
+}
+@media screen and (max-width: 480px) {
+    #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap #greeting-block .instrinsic-layout img {
+        width: 205px
+    }
+}
+form.registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+form.registration .group-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%
+}
+form.registration .group-wrapper .form-group {
+    width: calc((100% - 11px)/2)
+}
+form.registration .group-wrapper .form-group input {
+    padding: 9px 20px 10px 20px
+}
+@media screen and (max-width: 480px) {
+    form.registration .group-wrapper .form-group input {
+        padding: 11px 8px 12px 8px
+    }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    form.registration .group-wrapper {
+        display: inline-block;
+        width: 100%
+    }
+    form.registration .group-wrapper .form-group {
+        display: inline-block;
+        float:left;
+    }
+    form.registration .group-wrapper .form-group:first-child {
+        margin-right: 11px
+    }
+}
+@media screen and (max-width: 480px) {
+    form.registration .group-wrapper {
+        flex-direction: column
+    }
+    form.registration .group-wrapper .form-group {
+        width: 100%
+    }
+}
+form.registration .form-group {
+    position: relative;
+    width: 100%
+}
+form.registration .form-group span.error-response {
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    font-size: 10px;
+    color: red;
+    display: none
+}
+@media screen and (max-width: 768px) {
+    form.registration .form-group span.error-response {
+        top: 68px
+    }
+}
+form.registration .form-group .input-wrap {
+    position: relative
+}
+form.registration .form-group .input-wrap .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #4262F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+@media screen and (max-width: 768px) {
+    form.registration .form-group .input-wrap .dropdown-icon {
+        top: 12px
+    }
+}
+form.registration .form-group .input-wrap .dropdown-icon.rotate {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg)
+}
+form.registration .form-group .input-wrap ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #F9F9F9;
+    list-style: none;
+    display: none;
+    z-index: 2
+}
+form.registration .form-group .input-wrap ul li {
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 119.4%;
+    letter-spacing: 0.02em;
+    color: #162740;
+    padding: 5px 26px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer
+}
+form.registration .form-group .input-wrap ul li:hover {
+    color: #fff;
+    background-color: #4262F7
+}
+form.registration .form-group .input-wrap ul.active {
+    display: block
+}
+form.registration label {
+    display: inline-block;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 6px
+}
+form.registration label sup {
+    position: relative;
+    top: 4px
+}
+form.registration input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    width: 100%;
+    background: #F9F9F9;
+    border: 1px solid rgba(22, 39, 64, 0.2);
+    box-sizing: border-box;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119%;
+    letter-spacing: 0.02em;
+    text-align: left;
+    box-shadow: none;
+    outline: none;
+    padding: 9px 26px 10px 26px;
+    box-sizing: border-box;
+    margin-bottom: 26px
+}
+@media screen and (max-width: 768px) {
+    form.registration input {
+        padding: 11px 8px 12px 8px;
+        margin-bottom: 21px
+    }
+}
+form.registration input.active {
+    background: #F6F8FF;
+    border: 1px solid #4262F7
+}
+form.registration input:focus {
+    background: #F6F8FF;
+    border: 1px solid #4262F7
+}
+form.registration input[readonly] {
+    font-weight: 600;
+    color: #000
+}
+form.registration button[type="submit"] {
+    padding: 13px 15px 12px 15px;
+    color: #fff;
+    width: 100%;
+    background-color: #162740;
+    text-transform: uppercase;
+    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 119%;
+    letter-spacing: 0.12em;
+    text-align: center;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    cursor: pointer
+}
+form.registration button#email-check {
+    margin-top: 4px
+}
+@media screen and (max-width: 768px) {
+    form.registration button#email-check {
+        margin-top: 9px
+    }
+}
+form.registration button#inline-small[type="submit"] {
+    display: block;
+    width: 187px;
+    align-self: flex-end;
+    padding: 13px 56px 12px 56px
+}
+@media screen and (max-width: 768px) {
+    form.registration button#inline-small[type="submit"] {
+        width: 100%;
+        margin-top: 13px
+    }
+}
+form.registration input::-webkit-input-placeholder {
+    color: rgba(22, 39, 64, 0.6);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "neue-haas-grotesk-text", sans-serif
+}
+form.registration input::-moz-input-placeholder {
+    color: rgba(22, 39, 64, 0.6);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "neue-haas-grotesk-text", sans-serif
+}
+form.registration input::-ms-input-placeholder {
+    color: rgba(22, 39, 64, 0.6);
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: "neue-haas-grotesk-text", sans-serif
+}
+form.registration input::-webkit-outer-spin-button, form.registration input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+form.registration input[type=number] {
+    -moz-appearance: textfield
+}

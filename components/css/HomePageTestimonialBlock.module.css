@@ -263,6 +263,7 @@
     .summaryBlock{
         width:100%;
         margin-top:15.318vw;
+        min-height: 72.851vw;
     }
     .stepBox{
         display: flex;
@@ -319,47 +320,61 @@
         position: relative;
     }
     .testimonialDetail{
-        position: absolute;
-        top:50%;
-        left:0;
+        position: relative;
+        /* top:50%; */
+        /* left:0; */
         width:100%;
         background-color:#3F5CFB;
         border-radius: 2.77vw;
-        padding:8.31vw 6.225vw;
-        overflow: hidden;
-        transform: translateY(-35%);
-        opacity:0;
-        visibility: hidden;
+        margin-top:15.318vw;
+        /* padding:8.31vw 6.225vw; */
+        /* overflow: hidden; */
+        /* transform: translateY(-35%); */
+        display: none;
+    }
+    .minus{
+        display: none;
     }
     
     .testimonialText{
         font-family:"neue-haas-grotesk-text",sans-serif;
         font-style: normal;
         font-weight: normal;
-        font-size: 6.294vw;
-        line-height: 130%;
+        font-size: 4.432vw;
+        line-height: 150%;
         color: #FFFFFF;
         margin-bottom:7.25vw;
     }
+    .mobileReviewBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .nameDesignationBlock{
+        width:52.07vw;
+    }
     .reviewer,.designation{
-        font-size: 4.094vw;
-        line-height: 120%;
+        font-size: 4.432vw;
+        line-height: 150%;
         color: #FFFFFF;
         opacity: 0.7;
         font-family:"neue-haas-grotesk-text",sans-serif;
     }
     .designation{
-        font-size: 3.5vw;
+        display: block;
+        margin-top:2.3vw;
+        font-size: 3.324vw;
+        line-height: 150%;
     }
     .ratingBlock{
         display:flex;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 5.54vw;
+        margin-top: 0vw;
     }
     .ratingBlock svg{
         width:4.709vw;
-        margin-right:2.216vw;
+        margin-right:1.216vw;
     }
     .reviewPopup{
         width:100%;
@@ -368,6 +383,7 @@
         justify-content: center;
         margin-top:9.695vw;
     }
+    
     .reviewPopup span{
         font-weight: normal;
         font-size: 3.878vw;
@@ -376,6 +392,7 @@
         color: rgba(255, 255, 255, 0.6);
         font-family:"neue-haas-grotesk-text",sans-serif;
         margin-right:3.878vw;
+        text-transform: uppercase;
     }
     .reviewPopup svg{
         width:3.074vw;

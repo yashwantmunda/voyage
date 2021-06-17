@@ -1,11 +1,21 @@
 import { HomePageHeroBannerData } from '../data/HomePageHeroBanner';
 import styles from './css/heroBanner.module.css';
 import gsap from 'gsap';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const VideoModal = dynamic(() => import("./HomePageVideoModal"),{loading: () => null,ssr:false});
 
-
-export default function HeroBanner() {
+export default function HeroBanner({setFormState}) {
     
+    const [videoModalState, setVideoModalState] = useState('close');
+
+    const openForm = () => {
+        setFormState('open');
+    }
+    const openVideoModal = (e) => {
+        e.stopPropagation();
+        setVideoModalState('open')
+    }
     useEffect(() => {
         const timeline = gsap.timeline();
         timeline
@@ -26,10 +36,10 @@ export default function HeroBanner() {
                         {HomePageHeroBannerData.subHeading}
                     </p>
                     <div className={styles.btnWrapper}>
-                        <button className={`form-popup ${styles.trialBtn}`} data-scroll>
+                        <button onClick={openForm} className={`form-popup ${styles.trialBtn}`} data-scroll>
                             {HomePageHeroBannerData.bannerCtaText}
                         </button>
-                        <div className={styles.videoPopup} data-scroll>
+                        <div className={styles.videoPopup} data-scroll onClick={(e) => openVideoModal(e)}>
                             <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="15.5" cy="15.5" r="15.5" fill="#7E7E7E"/>
                                 <path d="M20.9706 13.9208C22.1863 14.6227 22.1863 16.3774 20.9706 17.0793L14.1324 21.0274C12.9167 21.7292 11.3971 20.8519 11.3971 19.4481L11.3971 11.552C11.3971 10.1483 12.9167 9.27091 14.1324 9.97279L20.9706 13.9208Z" fill="white"/>
@@ -85,6 +95,7 @@ export default function HeroBanner() {
                     </div>
                 </div>
             </div>
+            <VideoModal videoModalState={videoModalState} setVideoModalState={setVideoModalState}/>
         </section>
     )
 }

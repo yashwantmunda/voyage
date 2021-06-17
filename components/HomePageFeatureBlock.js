@@ -45,12 +45,17 @@ export default function HomePageFeatureBlock() {
         vref.current.play();
     }
 
-    const playPause = (vref) => {
+    const playPause = (vref,iref,bref) => {
         if(!vref.current.paused){
             vref.current.pause();
+            iref.current.style.display = "flex";
+            bref.current.style.display = "block";
         }
         else{
+            iref.current.style.display = "none";
+            bref.current.style.display = "none";
             vref.current.play();
+            
         }
     }
 
@@ -85,7 +90,7 @@ export default function HomePageFeatureBlock() {
                     {
                         features.featureData.map((feature,index) => (<div key={index} className={styles.featureVideoWrapper}>
                             
-                            <div ref={introRefs.current[index]} className={styles.videoIntroBlock}>
+                            <div ref={introRefs.current[index]} className={styles.videoIntroBlock} style={{backgroundImage:`url('/images/video-posters/${feature.featurePoster}')`}}>
                                 <div className={styles.iconBox}>
                                     <img src={`/images/video-posters/${feature.featureIcon}`}/>
                                 </div>
@@ -94,7 +99,7 @@ export default function HomePageFeatureBlock() {
                                 
                             </div>
                             
-                            <video onClick={() => playPause(videoRefs.current[index])} ref={videoRefs.current[index]} preload="auto" poster={`/images/video-posters/${feature.featurePoster}`}>
+                            <video onClick={() => playPause(videoRefs.current[index],introRefs.current[index],buttonRefs.current[index])} ref={videoRefs.current[index]} preload="auto" poster={`/images/video-posters/${feature.featurePoster}`}>
                                 <source src={`/videos/${feature.featureVideo}`} type="video/mp4" />
                             </video>
                             <div ref={buttonRefs.current[index]} onClick={() => playVideo_removeIntro(videoRefs.current[index],introRefs.current[index],buttonRefs.current[index])}  

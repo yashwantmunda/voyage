@@ -3,8 +3,7 @@ import styles from './css/homePageServiceBlock.module.css';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect } from 'react';
-import { createMedia } from "@artsy/fresnel"
-
+import { createMedia } from "@artsy/fresnel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,15 +22,14 @@ export default function HomePageServiceBlock() {
     
     useEffect(() => {
 
+
         ScrollTrigger.matchMedia({
   
             // desktop
             "(min-width: 769px)": function() {
                 
                 //   let sliders = gsap.utils.toArray('.commonSlideBox');
-                 
-
-                 
+                  
                 }
             })
         

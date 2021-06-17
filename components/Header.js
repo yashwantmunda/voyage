@@ -16,7 +16,7 @@ const { MediaContextProvider, Media } = createMedia({
   });
 
 
-export default function Header() {
+export default function Header({setFormState}) {
 
     
     const mobileMenuRef = useRef();
@@ -46,7 +46,7 @@ export default function Header() {
                     </Link>
                     <Media lessThan="md">
                         <div className={styles.extra_menu}>
-                            <a className={`form-popup ${styles.mobile_extra_menu}`}>Request Demo</a>
+                            <a onClick={() => setFormState('open')} className={`form-popup ${styles.mobile_extra_menu}`}>Request Demo</a>
                             <div onClick={openMenuDrawer} className={styles.hamburger}>
                                 <svg xmlns="http://www.w3.org/1000/svg" width="21" height="17" viewBox="0 0 21 17">
                                     <g fill="none" fillRule="evenodd" stroke="#000" strokeWidth="2">
@@ -76,7 +76,7 @@ export default function Header() {
 
                     </div>
                     <div className={styles.demo_login}>
-                        <a className={`form-popup ${styles.demo_btn}`}>Request Demo</a>
+                        <a onClick={() => (setFormState('open'), closeDrawer())} className={`form-popup ${styles.demo_btn}`}>Request Demo</a>
                         <a className={styles.login_btn} href="">Login</a>
                     </div>
                 </div>

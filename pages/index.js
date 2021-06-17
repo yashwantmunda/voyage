@@ -1,3 +1,5 @@
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import HomePageClientBlock from '../components/HomePageClientBlock'
 import HomePageHeroBanner from '../components/HomePageHeroBanner'
 import HomePageStatsBlock from '../components/HomePageStatsBlock'
@@ -7,14 +9,22 @@ import HomePageIntegrationBlock from '../components/HomePageIntegrationBlock'
 import HomePageTestimonial from '../components/HomePageTestimonial'
 import HomePageComplianceBlock from '../components/HomePageComplianceBlock'
 import HomePageSignupBlock from '../components/HomePageSignupBlock'
+import dynamic from 'next/dynamic'
+const RequestForm =  dynamic(() => import("../components/RequestForm"),{loading: () => null, ssr:false});
 
+// import RequestForm from '../components/RequestForm'
+
+import { useState } from 'react';
 
 export default function Home() {
- 
+  
+  const [ formState, setFormState ] = useState('close');
+
   return (
 
       <div className="main" id="main-container">
-        <HomePageHeroBanner/>
+        <Header setFormState={setFormState} />
+        <HomePageHeroBanner setFormState={setFormState}/>
         <HomePageClientBlock />
         <HomePageStatsBlock />
         <HomePageServiceBlock />
@@ -23,6 +33,8 @@ export default function Home() {
         <HomePageTestimonial />
         <HomePageComplianceBlock />
         <HomePageSignupBlock/>
+        <RequestForm formState={formState} setFormState={setFormState}/>
+        <Footer />
       </div>
 
   )
