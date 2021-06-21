@@ -49,6 +49,41 @@ button {
     z-index: 2;
   }
 
+  /* service section */
+  /* #serviceBlockId{
+    height: 100vh;
+  } */
+  #serviceBoxParent.stick{
+    position: fixed;
+    top:0;
+    left: 5.582vw;
+    height:100vh;
+    width: calc(88.832vw - 2.082vw);
+    z-index:2;
+  }
+  #featureBoxBlock.paddingBottom{
+    padding-top: 100vh;
+  }
+  body.stick{
+    overflow:hidden;
+  }
+  /* .panel,#serviceBoxParent{
+    height:100%;
+  } */
+  #featureBlockBox.sticky{
+    margin-top:100vh;
+  }
+  .commonSlideBox.active{
+    opacity:1;
+    visibility: visible;
+    transform:translateY(0%);
+  }
+  /* Service section */
+  body{
+overflow-x: hidden;
+  }
+  
+
 }
 
 
@@ -67,7 +102,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family:"neue-haas-grotesk-display", sans-serif;
   font-weight:400;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 a {
@@ -145,6 +180,9 @@ html.has-scroll-dragging {
       display: flex;
       align-items: center;
       justify-content: flex-start;
+    }
+    body{
+      overflow-x:hidden;
     }
    
   }

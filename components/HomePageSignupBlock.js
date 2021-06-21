@@ -25,7 +25,7 @@ export default function HomePageSignupBlock() {
                         <span className={styles.emailError}></span>
                     </div>
                     
-                    <p className={styles.extraInfo}>Or Text <span>DEMO</span> to <span>(323) 370-0977</span></p>
+                    <p className={styles.extraInfo}>or Text <span>DEMO</span> to <span>(323) 370-0977</span></p>
                 </div>
             </div>
             <SignupBottomBlock />

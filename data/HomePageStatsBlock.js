@@ -2,7 +2,7 @@ export const homePageStats = [
     {
         statTitle: "Average Return on Ad Spend",
         // icon: "average_return.svg",
-        data: "50x",
+        data: "40x",
         iconWidth: "3.955vw",
         iconData: `<svg  viewBox="0 0 58 51" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M26.4685 0L0.260357 32.5787C0.0486166 32.8444 -0.0400498 33.1758 0.0168555 33.5C0.0750842 33.8253 0.270944 34.1141 0.564734 34.303L26.4685 51V0Z" fill="#D8D7E6"/>

@@ -1,0 +1,202 @@
+@media screen and (min-width:769px){
+    .serviceBlock{
+        width:100%;
+        position: relative;
+        background-color: #fff;
+        
+        /* padding-bottom:8.238vw; */
+    }
+    .innerServiceBlock{
+        width:100%;
+        background-color: #fff;
+        /* height:38.031vw; */
+
+    }
+    .serviceProgressBlock{
+        position: absolute;
+        left:4.37vw;
+        /* left:0; */
+        top:50%;
+        width: 0.2082vw;
+        height:18.460vw;
+        background-color: #E9E9E9;
+        transform: translateY(-50%);
+        /* transform: translateY(-50%);
+        top: 50%; */
+    }
+    .serviceProgressBar{
+        width:100%;
+        height:100%;
+        background-color: #3F5CFB;
+        transform: scaleY(0);
+        transform-origin: 0 0%;
+    }
+    .serviceWrapper{
+        width:calc(100% - 2.082vw);
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left:2.082vw;
+        position: relative;
+        height:38.03vw;
+        /* overflow: hidden; */
+        margin-bottom: 8.828vw;
+        /* height:28.11vw;
+        position: relative; */
+    }
+    .serviceBox{
+        display:flex;
+        width:100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom:8.328vw;
+        width:100%;
+        height:100%;
+        position:absolute;
+        left:0;
+        top:0%;
+        /* transform: translateY(-50%); */
+        z-index:2;  
+        opacity:0;
+        visibility: hidden;
+        transform:translateY(10%);
+        transition:all 0.4s;
+    }
+    .lefttextBox{
+        width:36.296vw;
+    }
+    .lefttextBox h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.498vw;
+        line-height: 135%;
+        color: #000000;
+    }
+    .lefttextBox p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.249vw;
+        line-height: 175%;
+        letter-spacing: 0.01em;
+        color: #000000;
+        opacity: 0.5;
+        margin-top:1.388vw;
+        width:100%;
+        max-width: 35.810vw;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .rightImageBlock{
+        width:43.583vw;
+        height:28.593vw;
+        position: relative;
+    }
+    .imageWrap{
+        width:100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 0.694vw;
+    }
+    .imageWrap img.mainImage{
+        width:calc(100% - 6.94vw);
+        /* height:calc(100% - 6.94vw); */
+    }
+    .imageWrap img.cornerImage:first-child{
+        width:16.72vw;
+    }
+    
+    .imageWrap img.cornerImage{
+        position: absolute;
+        bottom:0;
+        left:0;
+        transform:translate(-15%,15%);
+        width:16.031vw;
+    }
+    .serviceBox:nth-child(2) .cornerImage{
+        left:unset;
+        right:0;
+        transform:translate(15%,15%);
+    }
+    .serviceBox:nth-child(3) .rightImageBlock .mainImage{
+        width:100%;
+    }
+    .rightBottom{
+        left:unset;
+        right:0;
+        transform:translate(15%,15%);
+    }
+    .mobileOnly{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .serviceBlock{
+        background-color: #F3F4F6;
+        padding:9.695vw 0 14.127vw 0;
+    }
+    .innerServiceBlock .serviceProgressBlock{
+        display: none;
+    }
+     .serviceBox{
+        margin-bottom:15.235vw;
+    }
+    .serviceBox:nth-child(n+3){
+        margin-bottom: 0;;
+    }
+    .lefttextBox h3{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 7.756vw;
+        line-height: 135%;
+        color: #000000;
+        margin-bottom: 8.864vw;
+    }
+    .lefttextBox p{
+        display: none;
+    }
+    .imageWrap{
+        border-radius: 1.385vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:7.756vw 0;
+        margin-bottom: 9.141vw;
+    }
+    .serviceBox:nth-child(3) .imageWrap{
+        padding:2.5vw 0;
+    }
+     .mainImage{
+        width:calc(100% - 13.85vw);
+        margin:0 auto;
+    }
+    
+    .serviceBox:nth-child(3) .rightImageBlock .mainImage{
+        width:100%;
+    }
+    .cornerImage{
+        width:34.625vw;
+        position: absolute;
+        left:-5.54vw;
+        bottom:-5.54vw;
+    }
+    .serviceBox:nth-child(2) .cornerImage{
+        left:unset;
+        right:-5.54vw;
+    }
+    p.mobileOnly{
+        font-weight: normal;
+        font-size: 3.878vw;
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #000000;
+        opacity: 0.5;
+        font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+}

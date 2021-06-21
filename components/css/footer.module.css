@@ -3,6 +3,7 @@
     #footer_wrapper{
         background-color: #162740;
     }
+   
     .footer{
         width:100%;
         padding:7.217vw 0 7.634vw 0;
@@ -46,7 +47,7 @@
     }
     .menuBlock h4{
         font-style: normal;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.1798vw;
         line-height: 1.388vw;
         display: flex;
@@ -62,10 +63,18 @@
         line-height: 1.596vw;
         letter-spacing: 0.0416vw;
         color: #FFFFFF;
+        opacity: 1;
         font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .menuBlock p span{
+        display: block;
     }
     .menuBlock a{
         text-transform: capitalize;
+        transition: opacity 0.3s;
+    }
+    .menuBlock a:hover{
+        opacity:0.3;
     }
     .menuBlock p{
         opacity:0.5;
@@ -222,5 +231,8 @@
     .footerContact span.divider{
         margin:0 3.878vw;
         
+    }
+    .menuBlock p span{
+        display: block;
     }
 }

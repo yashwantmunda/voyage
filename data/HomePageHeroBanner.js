@@ -1,6 +1,6 @@
 export const HomePageHeroBannerData = {
     titleText: 'Text better, not more.',
-    subHeading: "Voyage empowers eCommerce brands to drive revenue while growing and engaging community through text messaging.",
+    subHeading: "Our flexible full-stack SMS marketing and commerce platform empowers brands to drive revenue and grow + engage community through personalized text messaging at scale.",
     bannerCtaText: 'FREE 30-DAY TRIAL',
     videoTitleText: 'Watch Demo',
     videoDuration: 4,

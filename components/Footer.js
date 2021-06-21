@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from '../components/css/footer.module.css';
 import { FooterProductMenu, FooterLegalMenu } from '../data/headerFooterMenu';
 import FooterMenuBlock from './FooterMenuBlock';
+import { OfficeAddress } from '../data/headerFooterMenu';
 
 export default function Footer() {
 
@@ -31,10 +32,9 @@ export default function Footer() {
                         <FooterMenuBlock menu={footerProductMenu} />
                         <FooterMenuBlock menu={footerLegalMenu} />
                         <div className={styles.menuBlock}>
-                            <h4>Office</h4>
+                            <h4>{OfficeAddress.menuTitle}</h4>
                             <p>
-                                800 Wilshire Blvd. Ste. 200
-                                Los Angeles, CA 90017
+                            <span>1221 Ocean Ave,</span><span>Suite 1605,</span> <span>Santa Monica, CA 90401</span>
                             </p>
                         </div>
 
@@ -49,9 +49,9 @@ export default function Footer() {
                             </Link>
                         </div>
                         <div className={styles.footerContact}>
-                            <span>888 467 9417</span>
-                            <span className={styles.divider}>|</span>
-                            <a href="mailto:support@voyagetext.com"><span>support@voyagetext.com</span></a>
+                            {/* <span>888 467 9417</span>
+                            <span className={styles.divider}>|</span> */}
+                            <a href="mailto:hello@voyagesms.com"><span>hello@voyagesms.com</span></a>
                         </div>
                     </div>
 

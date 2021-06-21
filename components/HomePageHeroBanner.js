@@ -19,20 +19,25 @@ export default function HeroBanner({setFormState}) {
     useEffect(() => {
         const timeline = gsap.timeline();
         timeline
+        .from('#leftHomeBanner',{duration:0.4,y:'30%',opacity:0})
         .from('.mainHeroBanner',{ duration: 0.7,opacity:0,y:'30%'})
         .from('.messageSendAnimate',{ duration: 0.5, opacity:0,y:'50%' })
         .from('.animateRing',{ duration:1, scale:0.3, rotate: 320 })
-        gsap.from('.messageAnimationOne',{ duration: 1.5, opacity: 0, y: '60%',ease: 'elastic',delay:2.4});
-        gsap.from('.messageAnimationTwo',{ duration: 1.5, opacity: 0, y: '40%',delay: 3,ease: 'elastic'});
-        gsap.from('.messageAnimationThree',{ duration: 1.5, opacity: 0, y: '40%',delay: 3.4,ease: 'elastic'});
-        gsap.from('.messageAnimationFour',{ duration: 1.5, opacity: 0, y: '50%',delay:4.2,ease: 'elastic'});
+        gsap.from('.messageAnimationOne',{ duration: 1.5, opacity: 0, y: '60%',ease: 'elastic',delay:2.8});
+        gsap.from('.messageAnimationTwo',{ duration: 1.5, opacity: 0, y: '40%',delay: 3.4,ease: 'elastic'});
+        gsap.from('.messageAnimationThree',{ duration: 1.5, opacity: 0, y: '40%',delay: 3.8,ease: 'elastic'});
+        gsap.from('.messageAnimationFour',{ duration: 1.5, opacity: 0, y: '50%',delay:4.6,ease: 'elastic'});
+
+        // gsap.from('#homePageTitle',{duration:0.4,y:'20%',opacity:0});
+        // gsap.from('#homePageSubtext',{duration:0.4,y:'20%',opacity:0});
+
     }, [])
     return (
         <section id={styles.heroBanner}>
             <div className={styles.heroBanner_innerWrapper}>
-                <div className={styles.leftBlock} >
-                    <h1 className={styles.bannerTitle} data-scroll>{HomePageHeroBannerData.titleText}</h1>
-                    <p className={styles.bannerText} data-scroll>
+                <div id="leftHomeBanner" className={styles.leftBlock} >
+                    <h1 id="homePageTitle" className={styles.bannerTitle} data-scroll>{HomePageHeroBannerData.titleText}</h1>
+                    <p id="homePageSubtext" className={styles.bannerText} data-scroll>
                         {HomePageHeroBannerData.subHeading}
                     </p>
                     <div className={styles.btnWrapper}>

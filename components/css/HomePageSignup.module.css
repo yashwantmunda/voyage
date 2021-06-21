@@ -42,14 +42,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border:0.0694vw solid #000;
+        border:0.0694vw solid #3F5CFB;
         border-radius:0.347vw;
         padding:0.763vw 0.624vw 0.763vw 1.804vw;
     }
     #inputWrapper input{
         font-style: normal;
         font-weight: 500;
-        font-size: 1.110vw;
+        font-size: 0.832vw;
         line-height: 130%;
         letter-spacing: 0.05em;
         color: rgba(0, 0, 0, 1);
@@ -63,7 +63,7 @@
     #inputWrapper input::-ms-placeholder{
         font-style: normal;
         font-weight: 500;
-        font-size: 1.110vw;
+        font-size: 0.832vw;
         line-height: 130%;
         letter-spacing: 0.05em;
         color: rgba(0, 0, 0, 0.2);
@@ -72,18 +72,24 @@
     #inputWrapper button{
         font-style: normal;
         font-weight: 500;
-        font-size: 1.110vw;
+        font-size: 0.832vw;
         line-height: 130%;
         letter-spacing: 0.05em;
         color: #FFFFFF;
         padding:0.971vw 1.873vw;
         border-radius:0.347vw;
-        background-color: #000;
+        background-color: #3F5CFB;
+        border:1px solid #3F5CFB;
+        transition: all 0.3s;
+    }
+    #inputWrapper button:hover{
+        background-color: #fff;
+        color:#3F5CFB;
     }
     p.extraInfo{
         font-style: normal;
         font-weight: normal;
-        font-size: 1.249vw;
+        font-size: 0.971vw;
         line-height: 150%;
         text-align: center;
         color: #000000;

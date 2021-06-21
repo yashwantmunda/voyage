@@ -28,7 +28,7 @@ export const FooterLegalMenu = {
 
 export const OfficeAddress = {
     menuTitle: "Office",
-    name: "800 Wilshire Blvd. Ste. 200 Los Angeles, CA 90017"
+    name: "1221 Ocean Ave, Suite 1605, Santa Monica, CA 90401"
 };
 
 

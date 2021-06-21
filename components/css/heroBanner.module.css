@@ -55,9 +55,15 @@
         color: #FFFFFF;
         padding:0.971vw 1.873vw;
         background-color: #3F5CFB;
+        border:1px solid #3F5CFB;
         border-radius: 0.347vw;
         margin-right:3.678vw;
         cursor: pointer;
+        transition: all 0.3s;
+    }
+    .btnWrapper .trialBtn:hover{
+        color:#3F5CFB;
+        background-color:#fff;
     }
     .btnWrapper .videoPopup{
         display: flex;
@@ -65,6 +71,7 @@
         align-items: center;
         flex-wrap: wrap;
         cursor: pointer;
+        display: none;
     }
     .videoPopup svg{
         width:2.15vw;
@@ -223,7 +230,7 @@
         width: 100%;
         max-width: 90.18vw;
         margin: 0 auto;
-        padding-top:6.925vw;
+        padding-top:32.925vw;
     }
     .leftBlock h1{
         font-style: normal;
@@ -264,6 +271,7 @@
         align-items: center;
         justify-content: flex-start;
         margin-left:5.54vw;
+        display: none;
     }
     .videoPopup svg{
         width:23px;
@@ -317,6 +325,7 @@
         justify-content: flex-end;
         align-items: flex-end;
         margin-top:13.85vw;
+        overflow:hidden;
     }
     #dottedImage{
         width:13.573vw;

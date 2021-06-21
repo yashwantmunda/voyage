@@ -5,6 +5,8 @@ import { HeaderMenu } from '../data/headerFooterMenu';
 import { useRef } from 'react';
 import { createMedia } from "@artsy/fresnel"
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const { MediaContextProvider, Media } = createMedia({
     breakpoints: {
@@ -26,7 +28,13 @@ export default function Header({setFormState}) {
         gsap.to(overShadow.current,{duration:0.3, opacity:1,autoAlpha:1});
     }
     const closeDrawer = () => {
-        gsap.to(mobileMenuRef.current, {duration:0.4,x:'100%'});
+        ScrollTrigger.matchMedia({
+            // mobile
+            "(max-width: 768px)": function() {
+                gsap.to(mobileMenuRef.current, {duration:0.4,x:'100%'});
+            }
+        })
+        
         gsap.to(overShadow.current,{duration:0.3, opacity:0,autoAlpha:0});
     }
 

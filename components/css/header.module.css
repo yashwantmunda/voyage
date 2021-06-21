@@ -34,6 +34,7 @@
         width:27.135vw;
     }
     .menu_item{
+        display: block;
         font-size: 0.9716vw;
         line-height: 1.179vw;
         letter-spacing: 0.034vw;
@@ -41,6 +42,25 @@
         position: relative;
         text-transform: capitalize;
         font-family:"neue-haas-grotesk-text",sans-serif;
+    }
+    .menu_item::before{
+        content: "";
+        display: block;
+        height: 0.138vw;
+        width:calc(100% + 0.694vw);
+        background-color: black;
+        position: absolute;
+        bottom: -0.347vw;
+        transform: scaleX(0);
+        transform-origin: right center;
+        margin: auto;
+        transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0s;
+        left: -0.347vw;
+        
+    }
+    .menu_item:hover::before{
+        transform: scaleX(1);
+        transform-origin: left center;
     }
     .menu_item::after{
         content:'';
@@ -89,7 +109,13 @@
         padding:0.902vw 1.665vw;
         border-radius: 0.277vw;
         background-color:#3F5CFB;
+        border:1px solid #3F5CFB;
         text-transform: uppercase;
+        transition:all 0.3s;
+    }
+    .login_btn:hover{
+        background-color: #fff;
+        color:#3F5CFB;
     }
     .drawerShadow,.closeBtn,.extra_menu{
         display: none;
