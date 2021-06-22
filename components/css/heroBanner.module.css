@@ -266,6 +266,7 @@
         border-radius:5px;
         white-space: nowrap;
     }
+    
     .videoPopup{
         display: inline-flex;
         align-items: center;
@@ -412,6 +413,9 @@
         bottom:0;
         right:0;
         background-color: #162740;
+    }
+    .btnWrapper .videoPopup{
+        display: none;
     }
 }
 

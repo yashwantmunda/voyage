@@ -20,7 +20,7 @@ export const FooterLegalMenu = {
     menuTitle : "Legal",
     menuList: [
         { id: "1", name: "Terms & Conditions", url: "/terms-and-conditions"},
-        { id: "2", name: "Privacy Policy CCPA", url: "/privacy-policy-ccpa"},
+        // { id: "2", name: "Privacy Policy CCPA", url: "/privacy-policy-ccpa"},
         { id: "3", name: "Privacy Policy", url: "/privacy-policy"}
     ]
     

@@ -34,7 +34,7 @@ export default function Footer() {
                         <div className={styles.menuBlock}>
                             <h4>{OfficeAddress.menuTitle}</h4>
                             <p>
-                            <span>1221 Ocean Ave,</span><span>Suite 1605,</span> <span>Santa Monica, CA 90401</span>
+                            <span>1221 Ocean Ave</span><span>Suite 1605</span> <span>Santa Monica, CA 90401</span>
                             </p>
                         </div>
 

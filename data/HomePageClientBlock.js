@@ -3,10 +3,10 @@ export const clientBlockData = {
     title: "Leading eCommerce brands get unparalleled results with Voyage",
     clientLogos: [
         {
-            name: "ruggable.png",
-            alt: "Ruggable",
-            width: '8.467vw',
-            height:'4.155vw',
+            name: "dragun.svg",
+            alt: "dragun-beauty",
+            width: '9.467vw',
+            height:'10.155vw',
             id: 'ruggable'
         },
         {
