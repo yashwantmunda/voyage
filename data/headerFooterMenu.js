@@ -1,7 +1,7 @@
 export const HeaderMenu = [
     { id: "1", name: "product", url: "/product" },
     { id: "2", name: "pricing", url: "/pricing" },
-    { id: "3", name: "blog", url: "/blog" },
+    { id: "3", name: "blog", url: "https://blog.voyagesms.com" },
     { id: "4", name: "about", url: "/about" }
 ];
 
@@ -10,7 +10,7 @@ export const FooterProductMenu = {
     menuList: [
         { id: "1", name: "why voyage", url: "/"},
         { id: "2", name: "pricing", url: "/pricing"},
-        { id: "3", name: "blog", url: "/blog"},
+        { id: "3", name: "blog", url: "https://blog.voyagesms.com"},
         { id: "4", name: "about", url: "/about"}
     ]
     

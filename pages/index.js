@@ -47,7 +47,7 @@ export default function Home() {
         <HomePageComplianceBlock />
         <HomePageSignupBlock/>
         <RequestForm formState={formState} setFormState={setFormState}/>
-        <Footer />
+        <Footer setFormState={setFormState} />
       </div>
 </>
   )

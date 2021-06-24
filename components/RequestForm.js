@@ -88,8 +88,8 @@ const updatePhone = (e) => {
   const ePattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
   const urlPattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
   const normalizePhoneNumber = (v) => v && v.length >= 10 && `+1${v.replace(/[^\d]/g, '').slice(-10)}`;
-  const isFormValid = ({firstName, lastName, email, phone, companyName, referralSource, referralSourceName }) =>
-    (firstName || lastName) && (referralSource || referralSourceName) && email && companyName && phone.length == 12;
+  const isFormValid = ({firstName, lastName, email, phone, website, referralSource, referralSourceName }) =>
+    (firstName || lastName) && (referralSource || referralSourceName) && website && email && phone.length == 12;
 
 
   // utm tracking  
@@ -213,7 +213,8 @@ const formStepOneSubmit = (e) => {
     
     let hasError = false;
     const formData = getFormData();
-    const { email } = formData;
+    // const { email } = formData;
+    const { email, phone, firstName, lastName, website, referralSource } = formData;
     console.log(email);
     if (email.length == 0) {
         emailErrorRef.current.textContent = 'Please enter your work email';
@@ -228,134 +229,77 @@ const formStepOneSubmit = (e) => {
         gsap.to('#email-error',{opacity:1,display:'block'});
         hasError = true;
     }
-    
-    if (hasError) return false;
 
-    createOrUpdateRegistration(formData);
-
-    if (window.innerWidth < 769 ) {
-        document.getElementById('left-form-wrap').style.display = 'none';
-        document.getElementsByClassName('registration-wrapper')[0].classList.add('extra-margin');
-    }
-    
-    gsap.to('#email-error',{opacity:0,autoAlpha:0,duration:0.3});
-    emailRecordRef.current.value = email;
-    document.getElementById('form-container-s1').style.display = 'none';
-    document.getElementById('form-container-s2').style.display = 'block';
-    // gsap.to(FORM_IDS.CONTAINER_STEP1,{display:'none'});
-    // gsap.to(FORM_IDS.CONTAINER_STEP2,{display:'block'});
-}
-
-
-// step 2 form submit handler
-const formStepTwoSubmit = (e) => {
-    e.preventDefault();
-    let hasError = false;
-    const formData = getFormData();
-    const { phone, companyName, firstName, lastName, website } = formData;
-    console.log(website);
-    if (companyName.length == 0) {
-        companyErrorRef.current.textContent = 'Please enter your company name';
-        gsap.to('#company_error',{opacity:1,display:'block'});
-        hasError = true;
-    } else {
-        gsap.to('#company_error',{opacity:0,display:'none'});
-    }
-
-    if (phone.length == 0) {
-        phoneErrorRef.current.textContent = 'Please enter a valid US phone number';
-        gsap.to('#phone_error',{opacity:1,display:'block'});
-        hasError = true;
-    } else if (phone.length !== 12) {
-        phoneErrorRef.current.textContent = 'Please enter a valid US phone number';
-        gsap.to('#phone_error',{opacity:1,display:'block'});
-        hasError = true;
-    } else {
-        phoneErrorRef.current.textContent = '';
-        gsap.to('#phone_error',{opacity:0,display:'none'});
-    }
-
-    
-    if (`${firstName}${lastName}`.length == 0) {
-        nameErrorRef.current.textContent = 'Please enter your name';
-        gsap.to('#name_error',{opacity:1,display:'block'});
-        hasError = true;
-    } else {
-        nameErrorRef.current.textContent = 'Please enter your name';
-        gsap.to('#name_error',{opacity:0,display:'none'});
-    }
-    if (website.length == 0) {
-        webErrorRef.current.textContent = 'Please enter E-commerce website';
-        gsap.to('#website-error',{opacity:1,display:'block'});
-        hasError = true;
-    } else {
-        webErrorRef.current.textContent = '';
-        gsap.to('#website-error',{opacity:0,display:'none'});
-    }
-    if (!urlPattern.test(website) && website.length != 0) {
-        webErrorRef.current.textContent = 'Please enter a valid website';
-        gsap.to('#website-error',{opacity:1,display:'block'});
+  if (phone.length == 0) {
+      phoneErrorRef.current.textContent = 'Please enter a valid US phone number';
+      gsap.to('#phone_error',{opacity:1,display:'block'});
       hasError = true;
-    }
-
-    if (hasError) return false;
-
-    // createOrUpdateRegistration(formData);
-    subscribePhone(phone);
-    document.getElementById('form-container-s2').style.display = 'none';
-    document.getElementById('form-container-s3').style.display = 'block';
-    // gsap.to(FORM_IDS.CONTAINER_STEP2,{display:'none'});
-    // gsap.to(FORM_IDS.CONTAINER_STEP3,{display:'block'});
-}
-
-
-  // step 3 form submit handler
-  const formStepThreeSubmit = (e) => {
-    e.preventDefault();
-    let hasError = false;
-    const formData = getFormData();
-    const { referralSource, websiteVisitors } = formData;
-
-    if (!referralSource) {
-        referralErrorRef.current.textContent = 'Please select an option';
-        gsap.to('#referral_error',{opacity:1,display:'block'});
-    } else {
-        referralErrorRef.current.textContent = '';
-        gsap.to('#referral_error',{opacity:0,display:'none'});
-    }
-
-    if (!websiteVisitors) {
-        webVisitorErrorRef.current.textContent = "Please select an option even if it's rough estimate";
-        gsap.to('#web_visitors_error',{opacity:1,display:'block'});
-    } else {
-        webVisitorErrorRef.current.textContent = "";
-        gsap.to('#web_visitors_error',{opacity:0,display:'none'});
-    }
-
-    if (isFormValid(formData)) {
-      console.log('valid form');
-      document.getElementById('form-container-s3').style.display = 'none';
-      if (window.innerWidth < 769) {
-        document.getElementsByClassName('registration-wrapper')[0].classList.remove('extra-margin');
-      }
-      document.getElementById('greeting-block').style.display = 'flex';
-
-      createOrUpdateRegistration(formData);
-      trackFormSubmission();
-    }
+  } else if (phone.length !== 12) {
+      phoneErrorRef.current.textContent = 'Please enter a valid US phone number';
+      gsap.to('#phone_error',{opacity:1,display:'block'});
+      hasError = true;
+  } else {
+      phoneErrorRef.current.textContent = '';
+      gsap.to('#phone_error',{opacity:0,display:'none'});
   }
 
-const  referralDropDown = () => {
   
+  if (`${firstName}${lastName}`.length == 0) {
+      nameErrorRef.current.textContent = 'Please enter your name';
+      gsap.to('#name_error',{opacity:1,display:'block'});
+      hasError = true;
+  } else {
+      nameErrorRef.current.textContent = 'Please enter your name';
+      gsap.to('#name_error',{opacity:0,display:'none'});
+  }
+  if (website.length == 0) {
+      webErrorRef.current.textContent = 'Please enter E-commerce website';
+      gsap.to('#website-error',{opacity:1,display:'block'});
+      hasError = true;
+  } else {
+      webErrorRef.current.textContent = '';
+      gsap.to('#website-error',{opacity:0,display:'none'});
+  }
+  if (!urlPattern.test(website) && website.length != 0) {
+      webErrorRef.current.textContent = 'Please enter a valid website';
+      gsap.to('#website-error',{opacity:1,display:'block'});
+    hasError = true;
+  }
+
+  if (!referralSource) {
+    referralErrorRef.current.textContent = 'Please select an option';
+    gsap.to('#referral_error',{opacity:1,display:'block'});
+} else {
+    referralErrorRef.current.textContent = '';
+    gsap.to('#referral_error',{opacity:0,display:'none'});
+}
+
+if (isFormValid(formData)) {
+  console.log('valid form');
+  document.getElementById('form-container-s1').style.display = 'none';
+  if (window.innerWidth < 769) {
+    document.getElementsByClassName('registration-wrapper')[0].classList.remove('extra-margin');
+  }
+  document.getElementById('greeting-block').style.display = 'flex';
+
+  createOrUpdateRegistration(formData);
+  trackFormSubmission();
+}
+else{
+  console.log('invalid form');
+}
+  
+}
+
+
+
+const  referralDropDown = () => {
+  document.getElementById('dropdown-icon-blue').classList.add('rotate');
   gsap.to('#referral-value',{duration:0.3, opacity:1,autoAlpha:1});
 }
 
-const webVisitorsDropDown = () => {
-  gsap.to('#web-visitors-value',{duration:0.3,opacity:1,autoAlpha:1});
-}
-
 const referralDropDownBlur = () => {
-  
+  document.getElementById('dropdown-icon-blue').classList.remove('rotate');
   gsap.to('#referral-value',{duration:0.3, opacity:0,autoAlpha:0});
 }
  
@@ -381,15 +325,7 @@ const referralDropDownSelection = (e) => {
   }
 }
 
-const webDropDownSelection = (e) => {
-  let val = e.target.getAttribute('val');
-  setRegisterData({
-    ...registerData,
-    websiteVisitors: val
-  });
-  visitorRef.current.value = val;
-  gsap.to('#web-visitors-value',{opacity:0, autoAlpha:0});
-}
+
 
 
  
@@ -423,18 +359,58 @@ return (
                 
                     <div className="email-check-wrapper" id="form-container-s1">
                         <h2>
-                            <span>Get started with</span>
-                            <span className="underline">Voyage SMS</span>
+                            <span>Get started</span>
+                            {/* <span className="underline">Voyage SMS</span> */}
                         </h2>
                         <form id="email-check-form" className="registration">
 
                             <div className="form-group">
-                                <label htmlFor="email">Business Email</label>
+                                <label htmlFor="email">Work Email</label>
                                 <input onChange={(e) => setRegisterData({...registerData,email:e.target.value})} value={registerData.email} ref={emailRef} type="email" name="email" id="email" placeholder="phil@nike.com" autoComplete="on" />
                                 <span ref={emailErrorRef} className="error-response" id="email-error"></span>
                             </div>
 
-                            <button onClick={(e) => formStepOneSubmit(e) } type="submit" id="form-submit-s1" data-track="lead-form-next">Get Started</button>
+                            <div className="form-group">
+                                <label htmlFor="website">Website</label>
+                                <input onChange={(e) => setRegisterData({...registerData,website:e.target.value})} ref={webRef} type="text" value={registerData.website} name="website" id="website" placeholder="https://www.nike.com" autoComplete="on" />
+                                <span ref={webErrorRef} className="error-response" id="website-error"></span>
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="name">Name</label>
+                                <input onChange={(e) => setRegisterData({...registerData,name:e.target.value})} ref={nameRef} type="text" name="name" id="name" value={registerData.name} placeholder="Phil Smith" autoComplete="on" />
+                                <span ref={nameErrorRef} className="error-response" id="name_error"></span>
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="phone">Phone Number</label>
+                                <input onChange={updatePhone} ref={phoneRef} type="text" value={registerData.phone} name="phone" id="phone" placeholder="415-497-3732" autoComplete="on" maxLength="12" />
+                                <span ref={phoneErrorRef} className="error-response" id="phone_error"></span>
+                            </div>
+                            <div className="form-group">
+                            <label htmlFor="referral">Where did you hear about us?</label>
+                            <div className="input-wrap" style={{display: 'flex'}}>
+                                    
+                                <input onBlur={referralDropDownBlur} onFocus={referralDropDown} ref={referralRef} type="text" name="referral" defaultValue={registerData.referralSource} id="referral" className="dropdown-input" placeholder="Select an option" readOnly/>
+                                <input onChange={(e) => setRegisterData({...registerData,referralSourceName:e.target.value})} ref={referralSourceName} type="text" value={registerData.referralSourceName} name="referral-name" id="referral-name"  autoComplete="on" />
+
+                                <span ref={referralErrorRef} className="error-response" id="referral_error"></span>
+                                <div className="dropdown-icon" id="dropdown-icon-blue">
+                                  <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M1 1L4.2 5L7.4 1" stroke="white" strokeWidth="1.5" strokeLinejoin="round"></path>
+                                  </svg>
+                                </div>
+                                <ul id="referral-value" className="dropdown-option">
+                                    {
+                                        requestFormData.referralBlock.map((option,i) => (
+                                            <li onClick={referralDropDownSelection} key={i} val={option.val}>{option.name}</li>
+                                        ))
+                                    }
+                                </ul>
+                              </div>
+                            </div>
+
+                            <button onClick={(e) => formStepOneSubmit(e) } type="submit" id="form-submit-s1" data-track="lead-form-next">Request Demo</button>
 
                         </form>
                         <div id="instrinsic-layout">
@@ -443,97 +419,7 @@ return (
                     </div>
                     {/* <!-- Form step 1 --> */}
 
-                    {/* <!-- form step 2 --> */}
-                    <div className="final-contact-wrapper" id="form-container-s2">
-                        <form id="complete-data-form" className="registration">
-                            <input ref={emailRecordRef} type="email" name="" id="email_record" defaultValue={registerData.email} hidden/>
-
-                            <div className="form-group">
-                                <label htmlFor="company">Company Name</label>
-                                <input onChange={(e) => setRegisterData({...registerData,companyName:e.target.value})} ref={companyRef} type="text" value={registerData.companyName}  name="company" id="company" placeholder="Nike" autoComplete="on" />
-                                <span ref={companyErrorRef} className="error-response" id="company_error"></span>
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="website">E-commerce Website URL</label>
-                                <input onChange={(e) => setRegisterData({...registerData,website:e.target.value})} ref={webRef} type="text" value={registerData.website} name="website" id="website" placeholder="https://www.nike.com" autoComplete="on" />
-                                <span ref={webErrorRef} className="error-response" id="website-error"></span>
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="phone">Phone Number</label>
-                                <input onChange={updatePhone} ref={phoneRef} type="text" value={registerData.phone} name="phone" id="phone" placeholder="415-497-3732" autoComplete="on" maxLength="12" />
-                                <span ref={phoneErrorRef} className="error-response" id="phone_error"></span>
-                            </div>
-
-                            <div className="form-group">
-                                <label htmlFor="name">Your Name</label>
-                                <input onChange={(e) => setRegisterData({...registerData,name:e.target.value})} ref={nameRef} type="text" name="name" id="name" value={registerData.name} placeholder="Phil Smith" autoComplete="on" />
-                                <span ref={nameErrorRef} className="error-response" id="name_error"></span>
-                            </div>
-
-                            <button onClick={(e) => formStepTwoSubmit(e)} type="submit" id="form-submit-s2" data-track="lead-form-submit">Next</button>
-
-                        </form>
-
-                    </div>
-                    {/* <!-- form step 2 -->
-
-                    <!-- form step 3 --> */}
-                    <div className="final-contact-wrapper" id="form-container-s3">
-                        <form id="complete-data-form-new" className="registration">
-                            <input type="email" name="" id="email_record" defaultValue="" hidden />
-
-                            <div className="form-group" id="referral-block">
-                                <label htmlFor="referral">Where did you hear about us?</label>
-
-                                <div className="input-wrap" style={{display:'flex'}}>
-                                    <input onBlur={referralDropDownBlur} onFocus={referralDropDown} ref={referralRef} type="text" name="referral" defaultValue={registerData.referralSource} id="referral" className="dropdown-input" placeholder="Select an option" readOnly/>
-                                    <input onChange={(e) => setRegisterData({...registerData,referralSourceName:e.target.value})} ref={referralSourceName} type="text" value={registerData.referralSourceName} name="referral-name" id="referral-name"  autoComplete="on" />
-
-                                    <span ref={referralErrorRef} className="error-response" id="referral_error"></span>
-                                    <div className="dropdown-icon">
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1L4.2 5L7.4 1" stroke="white" strokeWidth="1.5" strokeLinejoin="round"></path>
-										</svg>
-                                    </div>
-                                    <ul id="referral-value" className="dropdown-option">
-                                        {
-                                            requestFormData.referralBlock.map((option,i) => (
-                                                <li onClick={referralDropDownSelection} key={i} val={option.val}>{option.name}</li>
-                                            ))
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div className="form-group" id="subscriber-block">
-                                <label htmlFor="web-visitors">Monthly Website Visitors</label>
-
-                                <div className="input-wrap">
-                                    <input onFocus={webVisitorsDropDown} ref={visitorRef} type="text" name="web-visitors" defaultValue={registerData.websiteVisitors} id="web-visitors" className="dropdown-input" placeholder="Select an option"/>
-                                    <span ref={webVisitorErrorRef} className="error-response" id="web_visitors_error"></span>
-                                    <div className="dropdown-icon">
-                                        <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 1L4.2 5L7.4 1" stroke="white" strokeWidth="1.5" strokeLinejoin="round"></path>
-										</svg>
-                                    </div>
-                                    <ul id="web-visitors-value" className="dropdown-option">
-                                        {
-                                            requestFormData.monthlyVisitorsBlock.map((option,i) => (
-                                                <li onClick={webDropDownSelection} key={i} val={option.val}>{option.name}</li>
-                                            ))
-                                        }
-                
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <button onClick={(e) => formStepThreeSubmit(e)} type="submit" id="form-submit-s3" data-track="lead-form-submit-3rd">Submit</button>
-
-                        </form>
-
-                    </div>
+                 
                     {/* <!-- form step 3 --> */}
 
                     <div id="greeting-block">

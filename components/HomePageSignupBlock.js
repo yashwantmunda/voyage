@@ -1,8 +1,24 @@
 import styles from './css/HomePageSignup.module.css';
 import SignupBottomBlock from './SignupBottomBlock';
-
+import { useRef } from 'react';
 
 export default function HomePageSignupBlock() {
+
+    const emailRef = useRef();
+    const emailErrorRef = useRef();
+   
+        const ePattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        const emailSignUp = () => {
+            let email = emailRef.current.value;
+            if (email.length == 0 || !ePattern.test(email)) {
+                emailErrorRef.current.textContent = 'Invalid email';
+                return false;
+            }
+             
+            console.log('valid');
+
+        }
+
 
     return (
         <section className={styles.signupBlock}>
@@ -18,11 +34,12 @@ export default function HomePageSignupBlock() {
                     of text messages are on us!
                     </p>
                     <div className={styles.inputBox}>
+                        <span id="smailSignUpError" ref={emailErrorRef} className={styles.emailError}></span>
                         <div id={styles.inputWrapper}>
-                            <input type="text" name="email" id="email" autoComplete="off" placeholder="ENTER YOUR EMAIL"/>
-                            <button id="emailSubmit">SIGN UP</button>
+                            <input ref={emailRef} type="text" name="email" id="emailSignUp" autoComplete="off" placeholder="ENTER YOUR EMAIL"/>
+                            <button onClick={() => emailSignUp()} id="emailSubmit">SIGN UP</button>
                         </div>
-                        <span className={styles.emailError}></span>
+                        
                     </div>
                     
                     <p className={styles.extraInfo}>or Text <span>DEMO</span> to <span>(323) 370-0977</span></p>

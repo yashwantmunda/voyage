@@ -85,7 +85,7 @@ export default function Header({setFormState}) {
                     </div>
                     <div className={styles.demo_login}>
                         <a onClick={() => (setFormState('open'), closeDrawer())} className={`form-popup ${styles.demo_btn}`}>Request Demo</a>
-                        <a className={styles.login_btn} href="">Login</a>
+                        <a className={styles.login_btn} href="https://app.voyagetext.com">Login</a>
                     </div>
                 </div>
                 <Media lessThan="md">

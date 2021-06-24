@@ -4,7 +4,7 @@ import { FooterProductMenu, FooterLegalMenu } from '../data/headerFooterMenu';
 import FooterMenuBlock from './FooterMenuBlock';
 import { OfficeAddress } from '../data/headerFooterMenu';
 
-export default function Footer() {
+export default function Footer({setFormState}) {
 
     const footerProductMenu = {
         menuTitle : FooterProductMenu.menuTitle,
@@ -21,7 +21,7 @@ export default function Footer() {
             <footer id={styles.footer_wrapper} data-scroll-section>
                 <div className={`container ${styles.footer}`}>
                     <div className={`form-popup ${styles.connected}`}>
-                        <span>Get Connected</span>
+                        <span onClick={() => setFormState('open')}>Get Connected</span>
                         <svg className={styles.arrow} viewBox="0 0 43 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.6226 1L40.6242 6.8657L32.6226 13.173" stroke="#5F8ED3" strokeWidth="2"/>
                             <path d="M0 7H39.6425" stroke="#5F8ED3" strokeWidth="2"/>

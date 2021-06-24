@@ -30,6 +30,34 @@
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
 }
+
+form.registration .form-group .input-wrap .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #4262F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+form.registration .form-group .input-wrap ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #F9F9F9;
+    list-style: none;
+    display: none;
+    z-index: 2;
+}
+#referral_error{
+    top:41px;
+}
 @media screen and (max-height: 640px) {
     #registration-form-modal .registration-wrapper.extra-margin {
         margin: 20px 0
@@ -86,6 +114,7 @@
         right: 18px
     }
 }
+
 #registration-form-modal .registration-wrapper .inner-block-wrap {
     width: 100%;
     height: auto;
@@ -162,7 +191,7 @@
     width: 100%;
     height: 100%;
     max-height: 572px;
-    padding: 95px 44px 0 44px;
+    padding: 30px 44px 0 44px;
     box-sizing: border-box
 }
 @media screen and (max-width: 768px) {
@@ -183,15 +212,16 @@
     line-height: 49px;
     letter-spacing: 0px;
     text-align: left;
-    margin-bottom: 56px;
-    color: #000000
+    margin-bottom: 20px;
+    color: #000000;
+    text-align:center;
 }
 @media screen and (max-width: 768px) {
     #registration-form-modal .registration-wrapper .inner-block-wrap #right-form-wrap .email-check-wrapper h2 {
         font-size: 36px;
         line-height: 119.4%;
         letter-spacing: 0.275px;
-        margin-bottom: 47px
+        margin-bottom: 17px
     }
 }
 @media screen and (device-width: 320px) {
@@ -480,7 +510,8 @@ form.registration .form-group .input-wrap ul {
     list-style: none;
     opacity: 0;
     visibility: hidden;
-    z-index: 2
+    z-index: 2;
+    display:block;
 }
 form.registration .form-group .input-wrap ul li {
     font-family: "neue-haas-grotesk-text", sans-serif;
@@ -537,7 +568,7 @@ form.registration input {
     outline: none;
     padding: 9px 26px 10px 26px;
     box-sizing: border-box;
-    margin-bottom: 26px
+    margin-bottom: 21px
 }
 @media screen and (max-width: 768px) {
     form.registration input {

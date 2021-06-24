@@ -36,6 +36,18 @@
     .inputBox{
         width:100%;
         max-width: 29.425vw;
+        position: relative;
+    }
+    .emailError{
+        font-family:"neue-haas-grotesk-text",sans-serif;
+        position: absolute;
+        left:0;
+        top:-1.362vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 150%;
+        color: #F41818;
     }
      #inputWrapper{
         width:100%;
