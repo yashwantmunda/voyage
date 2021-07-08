@@ -1,10 +1,15 @@
 import Head  from 'next/head';
+import { saveUtmFromParams } from '../services';
 
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
+    saveUtmFromParams();
     return (
        <>
             <Head>
+            <meta property="og:title" content="SMS Marketing for Ecommerce | Voyage Mobile"></meta>
+            <title>Voyage SMS: Text Marketing for eCommerce | Privacy policy</title>
+            <link rel="icon" type="image/png" sizes="32x32" href="/images/fevicon32.png"></link>
                  {/* Global Site Tag (gtag.js) - Google Analytics */}
                 <script
                     async

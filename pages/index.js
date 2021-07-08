@@ -27,13 +27,10 @@ export default function Home() {
   return (
    <>
    <Head>
-     <meta charSet="utf-8"></meta>
-     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta name="description" content="SMS marketing and text messaging for your ecommerce business. Get 40%+ CTR and 90%+ open rates. Get a demo today!"/>
     <meta name="robots" content="index, follow"/> 
     <meta property="og:title" content="SMS Marketing for Ecommerce | Voyage Mobile"></meta>
     <title>Voyage SMS: Text Marketing for eCommerce</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/fevicon32.png"></link>
    </Head>
       <div className="main" id="main-target"  data-scroll-container>
         <Header setFormState={setFormState} />
