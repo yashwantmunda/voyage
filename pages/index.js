@@ -38,8 +38,9 @@ export default function Home() {
         <title>Voyage SMS: Text Marketing for eCommerce</title>
       </Head>
       <div className="main" id="main-target" data-scroll-container>
-        <Header setFormState={setFormState} />
         <RequestForm formState={formState} setFormState={setFormState} />
+        <Header setFormState={setFormState} />
+
         <HomePageHeroBanner setFormState={setFormState} />
         <HomePageClientBlock />
         <HomePageStatsBlock />
