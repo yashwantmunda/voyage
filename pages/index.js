@@ -10,12 +10,13 @@ import HomePageTestimonial from "../components/HomePageTestimonial";
 import HomePageComplianceBlock from "../components/HomePageComplianceBlock";
 import HomePageSignupBlock from "../components/HomePageSignupBlock";
 import Head from "next/head";
+import RequestForm from "../components/RequestForm";
 // import { SmoothScrollProvider } from '../utils/smooth-scroll';
 import dynamic from "next/dynamic";
-const RequestForm = dynamic(() => import("../components/RequestForm"), {
-  loading: () => null,
-  ssr: false,
-});
+// const RequestForm = dynamic(() => import("../components/RequestForm"), {
+//   loading: () => null,
+//   ssr: false,
+// });
 
 import { useState } from "react";
 
@@ -37,8 +38,8 @@ export default function Home() {
         <title>Voyage SMS: Text Marketing for eCommerce</title>
       </Head>
       <div className="main" id="main-target" data-scroll-container>
-        <RequestForm formState={formState} setFormState={setFormState} />
         <Header setFormState={setFormState} />
+        <RequestForm formState={formState} setFormState={setFormState} />
         <HomePageHeroBanner setFormState={setFormState} />
         <HomePageClientBlock />
         <HomePageStatsBlock />
